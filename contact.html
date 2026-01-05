@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | L² Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">L² <span>Academy</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 50vh;">
+        <div class="container hero-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Fill out the form below or visit us.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="section-title">Send us a Message</h2>
+                    <form class="contact-form" action="https://formsubmit.co/warcarft433@gmail.com" method="POST">
+                        <!-- Honeypot -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Disable Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Success Page (optional, stays on page for now or we can make a thank you page, defaulting to formsubmit's page is easiest first step) -->
+                        <input type="hidden" name="_next" value="https://l2academy.com/thankyou.html">
+                        <!-- We might need to create this or just leave it default -->
+
+                        <!-- Actually, for a simple static site without a real domain yet, it's safer to not set _next or set it back to the contact page -->
+                        <input type="hidden" name="_next" value="false">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Interested Service</label>
+                            <select id="service" name="service">
+                                <option value="online">Online Tuition (All Subjects)</option>
+                                <option value="offline">Offline Tuition (Mathematics)</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="section-title">Contact Info</h2>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-map-marker-alt fa-2x" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p style="color: #ccc;">L² Academy<br>123 Education Lane, City Center<br>New Delhi,
+                                    India 110001</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-phone fa-2x" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p style="color: #ccc;">+91 123 456 7890<br>+91 987 654 3210</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-envelope fa-2x" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p style="color: #ccc;">info@l2academy.com<br>admissions@l2academy.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div
+                        style="width: 100%; height: 300px; background-color: #333; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #888;">Google Maps Embed Placeholder</span>
+                        <!-- 
+                        To Embed Map:
+                        <iframe src="..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>L² Academy</h4>
+                    <p>Empowering students through personalized education and dedicated mentorship.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@l2academy.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> City Center, Main Road</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333;">
+                <p>&copy; <span class="current-year"></span> L² Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

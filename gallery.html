@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | L² Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 2rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            color: #ffffff;
+            /* Force white text on dark overlay */
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">L² <span>Academy</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html" class="btn btn-primary">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 50vh;">
+        <div class="container hero-content">
+            <h1>Our Gallery</h1>
+            <p>A glimpse into our learning environment and student activities.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <!-- Dynamic Upload Section -->
+            <div class="text-center" style="margin-bottom: 2rem;">
+                <input type="file" id="mediaUpload" accept="image/*,video/*" style="display: none;">
+                <button class="btn btn-primary" onclick="document.getElementById('mediaUpload').click()">
+                    <i class="fas fa-plus-circle"></i> Add Photo/Video
+                </button>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">(Uploads are temporary for this session)
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="math.png" alt="Math Tutoring Session">
+                    <div class="gallery-overlay">
+                        <h3>Intensive Math Session</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="online.png" alt="Online Class">
+                    <div class="gallery-overlay">
+                        <h3>Interactive Online Learning</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="hero-bg.png" alt="Study Center">
+                    <div class="gallery-overlay">
+                        <h3>Our Study Environment</h3>
+                    </div>
+                </div>
+                <!-- Duplicate items for grid visualization -->
+                <div class="gallery-item">
+                    <img src="online.png" alt="Student Success">
+                    <div class="gallery-overlay">
+                        <h3>Connect from Anywhere</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="hero-bg.png" alt="Academy">
+                    <div class="gallery-overlay">
+                        <h3>Quiet Reading Zones</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="math.png" alt="Mentorship">
+                    <div class="gallery-overlay">
+                        <h3>Personalized Mentorship</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>L² Academy</h4>
+                    <p>Empowering students through personalized education and dedicated mentorship.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@l2academy.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> City Center, Main Road</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333;">
+                <p>&copy; <span class="current-year"></span> L² Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
