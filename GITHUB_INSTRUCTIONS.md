@@ -1,33 +1,34 @@
 # How to Host L² Academy on GitHub
 
-I have prepared the local repository for you. Since I cannot access your personal GitHub account directly without the CLI tool, please follow these simple steps to put your website online.
+I have fully prepared the local files and initialized the Git repository for you. Since I cannot access your personal GitHub account directly without your credentials, please follow these 3 simple steps to put your website online for free.
 
 ### Step 1: Create a Repository on GitHub
 1.  Log in to [GitHub.com](https://github.com).
 2.  Click the **+** icon in the top right and select **New repository**.
-3.  Repository Name: `L2Academy` (or any name you like).
-4.  Visibility: **Public**.
-5.  **Do not** check "Initialize with README" (we already have files).
+3.  **Repository Name**: Enter `L2Academy` (or any name you like).
+4.  **Visibility**: Select **Public**.
+5.  **Important**: **Do NOT** check "Add a README", "Add .gitignore", or "Choose a license". The repository must be empty.
 6.  Click **Create repository**.
 
 ### Step 2: Push Your Code
-You will see a screen with setup commands. Look for the section **"…or push an existing repository from the command line"**.
+After creating the repo, you will see a page with setup commands. Look for the section titled **"…or push an existing repository from the command line"**.
 
-1.  Open your terminal/command prompt in the `L2Academy` folder (I have already initialized git for you).
-2.  Run the commands shown on GitHub. They will look like this:
+1.  Open your command prompt/terminal in the project folder (or just use the terminal window where I am working).
+2.  Copy and run the 3 commands shown on GitHub. They will look exactly like this (replace `YOUR_USERNAME` with your actual username):
 
     ```bash
     git remote add origin https://github.com/YOUR_USERNAME/L2Academy.git
     git branch -M main
     git push -u origin main
     ```
-    *(Replace `YOUR_USERNAME` with your actual GitHub username).*
 
-### Step 3: Enable GitHub Pages (Free Hosting)
-1.  Once the code is pushed, go to your repository **Settings** tab.
-2.  Scroll down (or click "Pages" in the left sidebar).
-3.  Under **Build and deployment > Source**, select **Deploy from a branch**.
-4.  Under **Branch**, select **main** (or master) and folder **/(root)**.
-5.  Click **Save**.
+### Step 3: Enable Website Hosting (GitHub Pages)
+1.  Once you have pushed the code, go to the **Settings** tab of your new repository on GitHub.
+2.  In the left sidebar, click on **Pages** (under the "Code and automation" section).
+3.  Under **Build and deployment > Branch**:
+    *   Select **main** (or master) from the dropdown.
+    *   Ensure the folder is set to **/(root)**.
+    *   Click **Save**.
 
-Wait about 1-2 minutes, and GitHub will give you a link (e.g., `https://your-username.github.io/L2Academy/`). Your site is now live!
+**That's it!**
+Wait about 1-2 minutes. GitHub will display a link at the top of the page (e.g., `https://your-username.github.io/L2Academy/`). Click it to see your live website!
